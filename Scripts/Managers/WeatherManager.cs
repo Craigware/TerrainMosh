@@ -50,7 +50,7 @@ namespace Managers
                 biomeWeathers[biome] = weather;
             }
 
-            Output("Biome weathers instanitated. \n" + biomeWeathers.ToString());
+            Output("Biome weathers instanitated. \n" + biomeWeathers.ToString() + "\n---");
         }
 
         public WeatherTypes DecideWeather(string biomeType) {
@@ -77,6 +77,7 @@ namespace Managers
             return DecideWeather(Enum.GetName(biomeType));
         }
 
+        //TODO NEED TO DECIDE A SAVE LOCAITON FOR ALL STUFF
         public override bool Load() {
             return base.Load();
         }
