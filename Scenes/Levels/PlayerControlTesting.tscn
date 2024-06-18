@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://duuy0ah2bh8cn"]
+[gd_scene load_steps=5 format=3 uid="uid://duuy0ah2bh8cn"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/Player.cs" id="1_2xcdp"]
 
@@ -7,6 +7,9 @@ size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vuay"]
 size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihj5a"]
+size = Vector2(32, 253)
 
 [node name="PlayerControlTesting" type="Node2D"]
 
@@ -22,3 +25,9 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_1vuay")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 116.5)
+shape = SubResource("RectangleShape2D_ihj5a")
